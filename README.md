@@ -19,6 +19,7 @@ API:
 version.js
 ==========
 [{'verCode':2,'verName':'1.2.1','apkPath':'http://****.com/your.apk'}]
+verCode,verName对应APK中AndroidManifest.xml中的android:versionCode="1" android:versionName="1.0"
 * verCode  版本代码  int型  程序更新的依据
 * verName  版本名称 一般用来填写程序的版本号如1.0 1.1 2.0等
 * apkPath  版本对应的APK下载地址，可以放在自己的服务器上，也可以是市场的下载地址
