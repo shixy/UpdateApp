@@ -1,0 +1,1 @@
+[{'verCode':2,'verName':'1.2.1','apkPath':'http://****.com/your.apk'}]
