@@ -66,19 +66,20 @@ public class UpdateApp extends CordovaPlugin {
 		if (action.equals("checkAndUpdate")) {
 			this.checkPath = args.getString(0);
         	checkAndUpdate();
-        }else if(action.equals("getCurrentVersionName")){
-        	getCurrentVerName();
-        	JSONObject obj = new JSONObject();
-        	obj.put("versionCode", this.getCurrentVerCode());
-        	obj.put("versionName", this.getCurrentVerName());
-        	callbackContext.success(obj);
+        }else if(action.equals("getCurrentVersion")){
+        	//优化 缩短传输内容，减少流量
+//        	JSONObject obj = new JSONObject();
+//        	obj.put("versionCode", this.getCurrentVerCode());
+//        	obj.put("versionName", this.getCurrentVerName());
+        	callbackContext.success(this.getCurrentVerCode()+"");
         }else if(action.equals("getServerVersion")){
         	this.checkPath = args.getString(0);
         	if(this.getServerVerInfo()){
-        		JSONObject obj = new JSONObject();
-            	obj.put("serverVersionCode", newVerCode);
-            	obj.put("serverVersionName", newVerName);
-        		callbackContext.success(obj);
+        		//优化 缩短传输内容，减少流量
+//        		JSONObject obj = new JSONObject();
+//            	obj.put("serverVersionCode", newVerCode);
+//            	obj.put("serverVersionName", newVerName);
+        		callbackContext.success(newVerCode+"");
         	}else{
         		callbackContext.error("can't connect to the server!please check [checkpath]");
         	}
