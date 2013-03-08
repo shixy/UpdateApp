@@ -12,10 +12,10 @@ function UpdateApp() {
 UpdateApp.prototype.checkAndUpdate = function(checkPath){
 	cordova.exec(null, null, "UpdateApp", "checkAndUpdate", [checkPath]);
 }
-UpdateApp.prototype.getCurrentVerName = function(){
-	cordova.exec(successCallback, failureCallback, "UpdateApp", "getCurrentVersion", []);
+UpdateApp.prototype.getCurrentVerInfo = function(successCallback){
+	cordova.exec(successCallback, null, "UpdateApp", "getCurrentVersion", []);
 }
-UpdateApp.prototype.getServerVerName = function(checkPath){
+UpdateApp.prototype.getServerVerInfo = function(successCallback,failureCallback,checkPath){
 	cordova.exec(successCallback, failureCallback, "UpdateApp", "getServerVersion", [checkPath]);
 }
 cordova.addConstructor(function() {
