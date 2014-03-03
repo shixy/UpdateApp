@@ -32,7 +32,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.apusic.acp.R;
+import com.jingle.R;
 
 public class UpdateApp extends CordovaPlugin {
 	
